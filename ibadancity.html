@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <title>Lagos Hustle: City Travel</title>
+                <style>
+                        body { margin: 0; padding: 0; background: #111; color: #fff; font-family: sans-serif; overflow: hidden; user-select: none; }
+                                #gameCanvas { display: block; background: #2e7d32; margin: 0 auto; }
+                                        #ui-overlay { position: absolute; top: 10px; left: 10px; font-size: 16px; font-weight: bold; text-shadow: 2px 2px #000; z-index: 10; }
+                                                .controls { position: absolute; bottom: 20px; width: 100%; display: flex; justify-content: space-between; padding: 0 20px; box-sizing: border-box; z-index: 10; }
+                                                        .d-pad, .action-buttons { display: grid; gap: 5px; }
+                                                                .d-pad { grid-template-columns: repeat(3, 60px); }
+                                                                        .action-buttons { grid-template-columns: repeat(2, 70px); }
+                                                                                button { width: 60px; height: 60px; background: rgba(255, 255, 255, 0.3); border: 2px solid #fff; color: white; border-radius: 50%; font-size: 18px; font-weight: bold; }
+                                                                                        button:active { background: rgba(255, 255, 255, 0.6); }
+                                                                                                .btn-action { width: 70px; height: 70px; border-radius: 10px; background: rgba(255, 200, 0, 0.5); }
+                                                                                                    </style>
+                                                                                                    </head>
+                                                                                                    <body>
+
+                                                                                                    <div id="ui-overlay">
+                                                                                                        <div>Naira: ₦<span id="cash">0</span></div>
+                                                                                                            <div>Wanted Level: <span id="wanted">⭐☆☆☆☆</span></div>
+                                                                                                                <div>Location: <span id="zone">Lagos - Mainland</span></div>
+                                                                                                                    <div style="color: #ffeb3b; margin-top: 5px;">Objective: <span id="objective">Go to Oshodi Danfo Park to load passengers!</span></div>
+                                                                                                                    </div>
+
+                                                                                                                    <canvas id="gameCanvas"></canvas>
+
+                                                                                                                    <div class="controls">
+                                                                                                                        <div class="d-pad">
+                                                                                                                                <div></div><button id="btn-up">▲</button><div></div>
+                                                                                                                                        <button id="btn-left">◀</button><div></div><button id="btn-right">▶</button>
+                                                                                                                                                <div></div><button id="btn-down">▼</button><div></div>
+                                                                                                                                                    </div>
+                                                                                                                                                        <div class="action-buttons">
+                                                                                                                                                                <button class="btn-action" id="btn-hustle" style="background: rgba(0, 173, 181, 0.6)">HUSTLE</button>
+                                                                                                                                                                        <button class="btn-action" id="btn-enter" style="background: rgba(255,0,0,0.5)">HIJACK</button>
+                                                                                                                                                                            </div>
+                                                                                                                                                                            </div>
+
+                                                                                                                                                                            <!-- This points dynamically to your engine script below -->
+                                                                                                                                                                            <script src="expansion.js"></script>
+
+                                                                                                                                                                            </body>
+                                                                                                                                                                            </html>
+                                                                                                                                                                            
